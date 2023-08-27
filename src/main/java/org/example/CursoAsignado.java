@@ -1,6 +1,6 @@
 package org.example;
 
-public class CursoAsignado {
+public class CursoAsignado{
 
     private int codigoCurso;
     private String nombreCurso;

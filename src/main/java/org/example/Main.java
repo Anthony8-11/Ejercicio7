@@ -16,36 +16,38 @@ public class Main {
 
 
         Alumnos al1 = new Alumnos("2023015","Andrea","55555","5 calle 8-36");
-        System.out.println("Total alumno: "+al1.getNombre()+" Q: ",al1.getCostoTotal());
+        //System.out.println("Total alumno: "+al1.getNombre()+" Q: ",al1.getSumaMensual());
 
 
         Alumnos al2 = new Alumnos("2023015","Paco","55555","5 calle 8-26");
-//        al1.agregarCursoAsignado(cat_curso.get(1));
-//        al1.agregarCursoAsignado(cat_curso.get(2));
-//        al1.agregarCursoAsignado(cat_curso.get(1));
-//        al1.agregarCursoAsignado(cat_curso.get(2));
-        System.out.println(al1.getSumaMensual()+al2.getSumaMensual());
+        al1.agregarCursoAsignado(cat_curso.get(1));
+        al1.agregarCursoAsignado(cat_curso.get(2));
+        al1.getCostoMensual();
+        al2.agregarCursoAsignado(cat_curso.get(3));
+        al2.agregarCursoAsignado(cat_curso.get(0));
+        al2.getCostoMensual();
+        Alumnos al3 = new Alumnos("2345564","Mario","66666","8 calle 0-66");
+        al3.agregarCursoAsignado(cat_curso.get(1));
+        al3.agregarCursoAsignado(cat_curso.get(2));
+        al3.agregarCursoAsignado(cat_curso.get(3));
+        al3.agregarCursoAsignado(cat_curso.get(0));
+        al3.getCostoMensual();
 
 
-//        Alumnos al3 = new Alumnos("2345564","Mario","66666","8 calle 0-66");
-//        al1.agregarCursoAsignado(cat_curso.get(1));
-//        al1.agregarCursoAsignado(cat_curso.get(2));
+
 //
 //        Alumnos al4 = new Alumnos("2345677","Jose","77777","9 calle 9-67");
 //        al1.agregarCursoAsignado(cat_curso.get(1));
 //        al1.agregarCursoAsignado(cat_curso.get(2));
 
 
-        //al1.mostrarInformacion();
+        al1.mostrarInformacion();
 
-        for (CursoAsignado curso : al1.getCursoAsignados()){
-            System.out.println("Nombre del curso: "+al1.getCursoAsignados());
-            System.out.println("Costo: "+curso.getCostoCurso());
-
-        }
+        al2.mostrarInformacion();
+        al3.mostrarInformacion();
 
 
-
+        //System.out.println(al1.getCostoTotal()+al2.getCostoTotal());
 
 
 //        Alumnos al2 = new Alumnos("2022020","Monica","11111","6 calle 5-78");

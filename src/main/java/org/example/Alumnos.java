@@ -10,24 +10,28 @@ public class Alumnos {
     private String direccion;
     private ArrayList<CursoAsignado> cursoAsignados;
     private double sumaMensual;
+    private double total;
 
 
     public void agregarCursoAsignado(CursoAsignado curso){
 
         cursoAsignados.add(curso);
 
-
     }
 
-    public void getCostoTotal(){
+    public void getCostoMensual(){
 
         double t = 0;
+        double total = t;
         for (CursoAsignado curso : cursoAsignados){
         t = t+curso.getCostoCurso();
-
+        total= total+t;
         }
         this.sumaMensual = t;
+        this.total = total;
     }
+
+
 
     public Alumnos(String carnet, String nombre, String telefono, String direccion) {
         this.carnet = carnet;
@@ -88,21 +92,21 @@ public class Alumnos {
     }
 
     public void mostrarInformacion(){
-        System.out.println("Nombre: "+this.nombre);
-        System.out.println("Curso Asignado: "+this.cursoAsignados);
+        System.out.println("\nNombre: "+this.nombre);
+        //System.out.println("Curso Asignado: "+this.cursoAsignados);
         for (CursoAsignado curso : cursoAsignados){
             System.out.println("Curso: "+curso.getNombreCurso());
             System.out.println("Costo: "+curso.getCostoCurso());
             System.out.println("----------------");
+            getCostoMensual();
+
+
         }
 
-        //Getter and Setter
-
-
+        System.out.println("Total: "+this.sumaMensual);
+        System.out.println("Total Final: "+this.total);
 
 
     }
-
-
 
 }
